@@ -1,4 +1,4 @@
-writer = void => Core.getStdoutWriter
+writer = => Core.getStdoutWriter
 
 {
     Environment.arguments argument

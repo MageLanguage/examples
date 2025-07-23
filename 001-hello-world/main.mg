@@ -1,1 +1,1 @@
-"Hello world!" => (void => Core.getStdoutWriter).write
+"Hello world!" => (=> Core.getStdoutWriter).write
