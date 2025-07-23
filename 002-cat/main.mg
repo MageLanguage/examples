@@ -7,4 +7,4 @@ writer = void => Core.getStdoutWriter
         file => writer.write
         "\n" => writer.write
     }
-} => for
+} => For

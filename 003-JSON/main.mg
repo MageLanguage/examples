@@ -8,4 +8,4 @@ user = {
     name = "root"
 } => User
 
-(user => User => Core.JSON.newEncoder) => (void => Core.getStdoutWriter).write
+user => (User => Core.JSON.newEncoder).encode => (void => Core.getStdoutWriter).write
