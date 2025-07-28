@@ -1,3 +1,5 @@
+Core : "Core.mg" => Import
+
 writer = => Core.getStdoutWriter
 
 {
