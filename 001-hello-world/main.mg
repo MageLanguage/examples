@@ -1,5 +1,3 @@
-Core : "Core.mg" => Import
+Core : "Core.mg" => import
 
-writer = => Core.getStdoutWriter
-
-"Hello world!" => writer.write
+"Hello world!" => (=> Core.getStdoutWriter).write
