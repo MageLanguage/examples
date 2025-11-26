@@ -1,13 +1,11 @@
 core : "core" => import;
-IO   :  core.IO;
-File :  core.File;
 
 
-writer : => IO.getStdoutWriter;
+writer : => core.getStdoutWriter;
 
 {
     environment.arguments; argument;
     {
-        {argument => File.open; writer} => IO.WriterTo.writeTo
+        {argument => core.File.open; writer} => core.IO.WriterTo.writeTo
     };
 } => forRange;

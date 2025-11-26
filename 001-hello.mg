@@ -1,5 +1,4 @@
 core : "core" => import;
-IO   :  core.IO;
 
 
-{=> IO.getStdoutWriter; "Hello world!"} => IO.Writer.write;
+{=> core.getStdoutWriter; "Hello world!"} => core.IO.Writer.write;
