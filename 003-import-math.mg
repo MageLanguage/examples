@@ -1,9 +1,3 @@
-Math : {
-    add      : {{a : Uint; b : Uint} => Class; Uint} => method;
-    subtract : {{a : Uint; b : Uint} => Class; Uint} => method;
-} => Interface;
-
-
 add : {
     {a : Uint; b : Uint} => Class; Uint;
     a + b => return;
@@ -18,4 +12,4 @@ subtract : {
 {
     add      : add;
     subtract : subtract;
-} => Class => export;
+} => export;
