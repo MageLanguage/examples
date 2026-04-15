@@ -1,15 +1,13 @@
-add : {
-    {a : Uint; b : Uint} => Class; Uint;
-    a + b => return;
-} => procedure;
+ add : procedure {a : U64; b : U64}, U64 {
+    return a + b;
+};
 
-subtract : {
-    {a : Uint; b : Uint} => Class; Uint;
-    a - b => return;
-} => procedure;
+subtract : procedure {a : U64; b : U64}, U64 {
+    return a - b;
+};
 
 
-{
+export {
     add      : add;
     subtract : subtract;
-} => export;
+};

@@ -1,5 +1,5 @@
-core : "core" => import;
-math : "003-import-math.mg" => import;
+core : import "core";
+math : import "003-import-math.mg";
 
 
-{=> core.getStdoutWriter; {{0d5; 0d5} => math.add; 0d10} => math.subtract => String.from} => core.IO.Writer.write;
+(core.getStdoutWriter void).write (core.String.from (math.subtract (math.add 0d5, 0d5), 0d10))

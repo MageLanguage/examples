@@ -1,11 +1,12 @@
-core : "core" => import;
+core : import "core";
 
 
-writer : => core.getStdoutWriter;
+writer : core.getStdoutWriter void;
 
-{
-    environment.arguments; argument;
-    {
-        {argument => core.File.open; writer} => core.IO.WriterTo.writeTo
+label : for environment.arguments, {argument : String} {
+    if argument == "exit", {
+        break label;
     };
-} => forRange;
+
+    writer.write (core.File.read argument);
+};
